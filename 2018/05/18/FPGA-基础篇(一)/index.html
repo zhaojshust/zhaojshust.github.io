@@ -6,20 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://github.com/zhaojshust/zhaojshust.github.io">
-  <title>Hello World | 随笔</title>
+  <title>FPGA+OpenCL基础知识 | 随笔</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-<meta name="keywords" content="FPGA, OpenCL, Verilog, GPU">
+  <meta name="description" content="FPGA是什么？大家都知道CPU、GPU，也有的听说过FPGA，但是FPGA到底是什么？相信有些人还是很迷茫的。。。其实，我当初对于FPGA的认识也是寥寥无几，所以现在分享一下我对于FPGA的一些个人认识和想法。 首先，先给出google和网上的一些其他学者对于FPGA的定义及FPGA的图片：FPGA，是Field Programmable Gate Array的简称，中文名称为现场可编程门阵列，">
+<meta name="keywords" content="FPGA,OpenCL">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://github.com/zhaojshust/zhaojshust.github.io/2018/05/18/hello-world/index.html">
+<meta property="og:title" content="FPGA+OpenCL基础知识">
+<meta property="og:url" content="https://github.com/zhaojshust/zhaojshust.github.io/2018/05/18/FPGA-基础篇(一)/index.html">
 <meta property="og:site_name" content="随笔">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="FPGA是什么？大家都知道CPU、GPU，也有的听说过FPGA，但是FPGA到底是什么？相信有些人还是很迷茫的。。。其实，我当初对于FPGA的认识也是寥寥无几，所以现在分享一下我对于FPGA的一些个人认识和想法。 首先，先给出google和网上的一些其他学者对于FPGA的定义及FPGA的图片：FPGA，是Field Programmable Gate Array的简称，中文名称为现场可编程门阵列，">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-05-18T07:51:57.876Z">
+<meta property="og:image" content="https://github.com/assets/FPGA/fpga.jpg">
+<meta property="og:image" content="https://github.com/assets/FPGA/fpga-1.jpg">
+<meta property="og:image" content="https://github.com/assets/FPGA/fpga-2.jpg">
+<meta property="og:updated_time" content="2018-05-18T09:47:58.710Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="FPGA+OpenCL基础知识">
+<meta name="twitter:description" content="FPGA是什么？大家都知道CPU、GPU，也有的听说过FPGA，但是FPGA到底是什么？相信有些人还是很迷茫的。。。其实，我当初对于FPGA的认识也是寥寥无几，所以现在分享一下我对于FPGA的一些个人认识和想法。 首先，先给出google和网上的一些其他学者对于FPGA的定义及FPGA的图片：FPGA，是Field Programmable Gate Array的简称，中文名称为现场可编程门阵列，">
+<meta name="twitter:image" content="https://github.com/assets/FPGA/fpga.jpg">
   
     <link rel="alternative" href="/atom.xml" title="随笔" type="application/atom+xml">
   
@@ -162,35 +166,43 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-FPGA-基础篇(一)" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      FPGA+OpenCL基础知识
     </h1>
   
 
         
-        <a href="/2018/05/18/hello-world/" class="archive-article-date">
-  	<time datetime="2018-05-18T07:51:57.875Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-18</time>
+        <a href="/2018/05/18/FPGA-基础篇(一)/" class="archive-article-date">
+  	<time datetime="2018-05-18T08:47:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-18</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h3 id="FPGA是什么？"><a href="#FPGA是什么？" class="headerlink" title="FPGA是什么？"></a>FPGA是什么？</h3><p>大家都知道CPU、GPU，也有的听说过FPGA，但是FPGA到底是什么？相信有些人还是很迷茫的。。。其实，我当初对于FPGA的认识也是寥寥无几，所以现在分享一下我对于FPGA的一些个人认识和想法。</p>
+<p>首先，先给出google和网上的一些其他学者对于FPGA的定义及FPGA的图片：FPGA，是Field Programmable Gate Array的简称，中文名称为现场可编程门阵列，是一种可编程器件，是在PAL(可编程逻辑阵列)、GAL(通用阵列逻辑)、CPLD(复杂可编程逻辑器件)等传统逻辑电路和门阵列的基础上发展起来的一种半定制电路，主要应用于ASIC(专用集成电路)领域，既解决了半定制电路的不足，又克服了原有可编程器件门电路数有限的缺点。</p>
+<p><img src="/assets/FPGA/fpga.jpg" width="500"></p>
+
+<p>上图的FPGA是Intel Arria 10的照片，上面写着“Arria 10 FPGAs and Socs”字样的就是FPGA芯片，那么这块开发板的其他部分是什么呢？其实大家也可以看出来，上面是各种的pcie插槽，网口，等等的一些port端口。当然我们的关注点只是FPGA芯片本身，不关注开发板的其他部分，所以下面咱们将对于FPGA芯片部分进行详细的讨论。</p>
+<p>FPGA芯片下面简称FPGA，下面仍然先给出几幅图片，方便讲解，下面图片大体的说明了FPGA的组成部分及其各个部分在FPGA中所占的比例，可以看到FPGA是由interconnet, memory 和 logic 组成的。至于这3个东西各自是什么，请往下看。</p>
+<p><img src="/assets/FPGA/fpga-1.jpg" width="500"></p>
+
+<p>在对FPGA有了宏观的了解之后，下面进一步的探讨FPGA，老规矩先上图，从图中可以看出来上面所说的memory就是FPGA中的memory block，其中的interconnet就是图中的programmable routing switch，logic就是logic modules。下图中还包括一个DSP block模块，下面做讲解。</p>
+<p><img src="/assets/FPGA/fpga-2.jpg" width="500"></p>
+
+<p>下面就对于FPGA的四个重要组成部分做详细介绍：</p>
+<p><strong>memory block（bram）</strong>：这里说的memory由于是在FPGA片上的所以也称之为on-chip memory，FPGA的on-chip memory的构成有如下几种：MLAB，M9K，M20K等等，具体查看你所购买的FPGA。对于block memory有如下特性，举例说明：</p>
+<p>M9K：有效的范围是256-8K，为啥不是9K呢？其实这里涉及到memory的管理问题，可以类比CPU中对于memory的管理。对于bram来说，你可以设置memory的位宽和深度，比如说，默认的是memory的深度是8K（对于M9K而已），每一个地址的容量就是1bit，也就是8K*1。当然你也可以设置深度为512，那么每一个地址的容量就是18bit，也就是512*18。</p>
+<p><strong>logic</strong>：这里所指的就是与或非三种门电路，实际实现是通过查找表实现的。</p>
+<p><strong>routing switch</strong>：</p>
+<p><strong>dsp</strong>：</p>
 
       
 
@@ -230,6 +242,21 @@ var _hmt = _hmt || [];
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">FPGA</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">OpenCL</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -280,7 +307,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://github.com/zhaojshust/zhaojshust.github.io/2018/05/18/hello-world/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://github.com/zhaojshust/zhaojshust.github.io/2018/05/18/FPGA-基础篇(一)/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -292,20 +319,6 @@ var _hmt = _hmt || [];
 </article>
 
   
-<nav id="article-nav">
-  
-    <a href="/2018/05/18/hello/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          hello
-        
-      </div>
-    </a>
-  
-  
-</nav>
-
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -420,6 +433,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">FPGA</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">OpenCL</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
@@ -469,7 +490,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">zhaojs, &lt;br&gt;&lt;br&gt; 只是随便写写自己学习到的东西 &lt;br&gt; 谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">由于比较忙，只能不定期更新，望见谅。</div>
   	  	
     	</section>
     
